@@ -196,13 +196,13 @@ const filteredItems = computed(() => props.items.filter(props.filterFn))
 ```
 </details>
 
-### @defineEmit-basic:
+### @defineEmit-basic @Emit:
 <details>
 <summary>@defineEmit 子コンポーネントから親へイベントを発火する（基本）</summary>
 
 **Vue.js - Composition API**
 
-子コンポーネントから親コンポーネントにイベントを通知したい場合、Vue 3 Composition APIでは `defineEmits()` を使用します。これは従来の `this.$emit()` の代替です。
+子コンポーネントから親コンポーネントにイベントを通知したい場合、Vue.jsのComposition APIでは `defineEmits()` を使用します。
 
 以下は、ボタンをクリックしたときに `"clicked"` というイベントを親へ通知する最小構成の例です。
 
