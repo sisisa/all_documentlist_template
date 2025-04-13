@@ -195,3 +195,44 @@ const filteredItems = computed(() => props.items.filter(props.filterFn))
 </script>
 ```
 </details>
+
+### @defineEmit-basic:
+<details>
+<summary>@defineEmit 子コンポーネントから親へイベントを発火する（基本）</summary>
+
+**Vue.js - Composition API**
+
+子コンポーネントから親コンポーネントにイベントを通知したい場合、Vue 3 Composition APIでは `defineEmits()` を使用します。これは従来の `this.$emit()` の代替です。
+
+以下は、ボタンをクリックしたときに `"clicked"` というイベントを親へ通知する最小構成の例です。
+
+```vue
+<!-- ChildComponent.vue -->
+<template>
+  <button @click="handleClick">クリック</button>
+</template>
+
+<script setup>
+// イベント名を定義
+const emit = defineEmits(['clicked'])
+
+// イベント発火関数
+const handleClick = () => {
+  emit('clicked')
+}
+</script>
+
+<!-- ParentComponent.vue -->
+<template>
+  <!-- 子コンポーネントから "clicked" イベントを受け取る -->
+  <ChildComponent @clicked="onChildClicked" />
+</template>
+
+<script setup>
+import ChildComponent from './ChildComponent.vue'
+
+// イベントハンドラ
+const onChildClicked = () => {
+  console.log('子コンポーネントでクリックされました')
+}
+</script>
