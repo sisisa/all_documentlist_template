@@ -1,10 +1,6 @@
 
 ---
-
-## Vue.js の Props 使い方まとめ
-
-以下は、Vue.js の `props` に関するよく使うパターンとその説明です。
-
+### @props: 基本的な使い方
 <details>
 <summary>@props: 基本的な使い方</summary>
 
