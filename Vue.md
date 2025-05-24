@@ -1,6 +1,6 @@
-## @defineprops(props)
+## @defineprops(@props)
 
-### @props-basic:
+### props-basic:
 <details>
 <summary>@props 子コンポーネントで親からのデータを受け取る（基本）</summary>
 
@@ -37,36 +37,7 @@ const props = defineProps({
 </details>
 
 ---
-
-### @props-default:
-<details>
-<summary>@props 型とデフォルト値・必須チェックを付ける</summary>
-
-**Vue.js**  
-```vue
-<template>
-  <div>
-    ユーザー名: {{ username }}<br />
-    年齢: {{ age }}<br />
-  </div>
-</template>
-
-<script setup>
-import { defineProps, withDefaults } from 'vue'
-
-const props = withDefaults(defineProps<{
-  username: string
-  age?: number
-}>(), {
-  age: 18
-})
-</script>
-```
-</details>
-
----
-
-### @props-object:
+### props-object:
 <details>
 <summary>@props 複雑なオブジェクト型を渡す</summary>
 
@@ -110,7 +81,7 @@ const props = defineProps({
 
 ---
 
-### @props-callback:
+### props-callback:
 <details>
 <summary>@props 関数を受け取ってコールバックを使う</summary>
 
@@ -149,7 +120,7 @@ const props = defineProps({
 
 ---
 
-### @props-filter:
+### props-filter:
 <details>
 <summary>@props フィルタ・ソート・検索向けに配列と関数を渡す</summary>
 
@@ -198,9 +169,9 @@ const filteredItems = computed(() => props.items.filter(props.filterFn))
 ```
 </details>
 
-## @defineEmit(emit)
+## @defineEmit(@emit)
 
-### @defineEmit-basic @Emit:
+### defineEmit-basic:
 <details>
 <summary>@defineEmit 子コンポーネントから親へイベントを発火する（基本）</summary>
 
