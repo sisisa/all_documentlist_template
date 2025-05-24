@@ -1,3 +1,5 @@
+## @defineprops(props)
+
 ### @props-basic:
 <details>
 <summary>@props 子コンポーネントで親からのデータを受け取る（基本）</summary>
@@ -195,6 +197,8 @@ const filteredItems = computed(() => props.items.filter(props.filterFn))
 </script>
 ```
 </details>
+
+## @defineEmit(emit)
 
 ### @defineEmit-basic @Emit:
 <details>
